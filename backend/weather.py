@@ -10,6 +10,7 @@ def clima():
 
     api_key = "74a499c84c5ab588fb5b24eb0a9214bc"
     url = f"https://api.openweathermap.org/data/2.5/weather?q={ciudad}&appid={api_key}&units=metric&lang=es"
+   
     respuesta = requests.get(url)
 
     if respuesta.status_code == 200:
