@@ -9,7 +9,7 @@ app.register_blueprint(weather_bp)
 
 @app.route('/')
 def index():
-    return 'Hello, Flask!'
+    return 'CLIMA 24/7'
 
 
 if __name__ == '__main__':
