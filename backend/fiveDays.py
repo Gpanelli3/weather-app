@@ -1,10 +1,12 @@
 from flask import request, jsonify, Blueprint
 import requests
 
-fiveDays = Blueprint('fiveDays', __name__, url_prefix='/fiveDays')
+fiveDays_bp = Blueprint('fiveDays', __name__, url_prefix='/fiveDays')
 
-@fiveDays.post('/')
+@fiveDays_bp.route('/', methods=['POST', 'OPTIONS'])
 def five_days():
+    if request.method == 'OPTIONS':
+        return jsonify({'ok': True}), 200
     data = request.get_json()
     ciudad = data.get("ciudad", "")
 
