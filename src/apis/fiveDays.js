@@ -7,7 +7,7 @@ function FiveDays() {
   const fetchFiveDays = async () => {
     console.log("Consultando...");
     try {
-      const response = await fetch("http://localhost:5000/fiveDays", {
+      const response = await fetch("http://localhost:5000/fiveDays/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ciudad }),
